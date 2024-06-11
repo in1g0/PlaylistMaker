@@ -12,7 +12,7 @@
         <item name="android:textFontWeight">500</item>
     </style>
 
-    <style name="ThemeForPlaylistMaker" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="ThemeForPlaylistMaker" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:background">@color/dark_theme_YP_Black</item>
     </style>
 
@@ -20,7 +20,7 @@
         <item name="android:background">@color/dark_theme_YP_Black</item>
     </style>
 
-    <style name="StyleForSettingsActivity" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="StyleForSettingsActivity" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:windowBackground">@color/dark_theme_YP_Black</item>
         <item name="android:fontFamily">@font/ys_display_regular</item>
         <item name="android:textFontWeight">400</item>
@@ -49,5 +49,9 @@
     <style name="BackButton">
         <item name="android:src">@drawable/arrow_back</item>
         <item name="android:tint">@color/white</item>
+    </style>
+    <style name="colorsForSearchBar">
+        <item name="android:textColorHint">@color/dark_theme_YP_Black</item>
+        <item name="android:tint">@color/dark_theme_YP_Black</item>
     </style>
 </resources>

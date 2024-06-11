@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="ButtonsMainActivityLightTheme">
+    <style name="ButtonsMainActivityLightTheme" parent="Widget.MaterialComponents.Button.UnelevatedButton">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:layout_weight">1</item>
@@ -12,7 +12,7 @@
         <item name="android:textFontWeight">500</item>
     </style>
 
-    <style name="ThemeForPlaylistMaker" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="ThemeForPlaylistMaker" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:windowBackground">@color/white</item>
     </style>
 
@@ -20,7 +20,7 @@
         <item name="android:background">@color/light_theme_blue</item>
     </style>
 
-    <style name="StyleForSettingsActivity" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="StyleForSettingsActivity" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:windowBackground">@color/white</item>
 
     </style>
@@ -29,7 +29,7 @@
     <style name="SettingsFrameLayout">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_weight">3</item>
+        <item name="android:layout_weight">1</item>
         <item name="android:background">?android:windowBackground</item>
     </style>
 
@@ -70,5 +70,10 @@
         <item name="android:background">@color/white</item>
         <item name="android:textColor">@color/black</item>
     </style>
+    <style name="colorsForSearchBar"> 
+        <item name="android:textColorHint">@color/search_hint_color</item>
+        <item name="android:tint">@color/search_hint_color</item>
+    </style>
+
 
 </resources>

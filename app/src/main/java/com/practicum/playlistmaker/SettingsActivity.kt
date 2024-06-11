@@ -15,8 +15,6 @@ class SettingsActivity : AppCompatActivity() {
 
         val backButton: ImageView = findViewById(R.id.backButton)
         backButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
             finish()
         }
         val shareButton: LinearLayout = findViewById(R.id.share)
@@ -33,16 +31,16 @@ class SettingsActivity : AppCompatActivity() {
         }
     }
 
-    fun shareApp() {
-        val shareIntent = Intent().apply {
+    private fun shareApp() {
+        Intent().apply {
             action = Intent.ACTION_SEND
             putExtra(Intent.EXTRA_TEXT, getString(R.string.share_message))
             type = "text/plain"
+            startActivity(Intent.createChooser(this, getString(R.string.share_through)))
         }
-        startActivity(Intent.createChooser(shareIntent, getString(R.string.share_through)))
     }
 
-    fun sendSupportEmail() {
+    private fun sendSupportEmail() {
         val supportEmail = getString(R.string.support_email)
         val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
             data = Uri.parse("mailto:")
@@ -67,7 +65,7 @@ class SettingsActivity : AppCompatActivity() {
         }
     }
 
-    fun openLicenseLink() {
+    private fun openLicenseLink() {
         val licenseUrl = getString(R.string.license_url)
         val licenseIntent =
             Intent(Intent.ACTION_VIEW, Uri.parse(licenseUrl))
