@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ButtonsMainActivityLightTheme" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textSize">@dimen/font_size_buttons</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/ys_display_medium</item>
+        <item name="android:textFontWeight">500</item>
+    </style>
+
+    <style name="ThemeForPlaylistMaker" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="StyleForMainActivity">
+        <item name="android:background">@color/light_theme_blue</item>
+    </style>
+
+    <style name="StyleForSettingsActivity" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+
+    </style>
+
+
+    <style name="SettingsFrameLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">?android:windowBackground</item>
+    </style>
+
+    <style name="SettingsLinearLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">?android:windowBackground</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:padding">25dp</item>
+    </style>
+
+    <style name="SettingsTextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">?android:windowBackground</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/sett_font_size</item>
+        <item name="android:fontFamily">@font/ys_display_regular</item>
+        <item name="android:textFontWeight">400</item>
+    </style>
+
+    <style name="TextSettingsAndSearchHeader">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_size_buttons</item>
+        <item name="android:fontFamily">@font/ys_display_medium</item>
+        <item name="android:textFontWeight">500</item>
+    </style>
+
+    <style name="BackButton">
+        <item name="android:src">@drawable/arrow_back</item>
+        <item name="android:tint">@color/black</item>
+    </style>
+
+    <style name="SearchFormStyle" parent="Widget.AppCompat.SearchView">
+        <item name="queryBackground">@color/white</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="colorsForSearchBar"> 
+        <item name="android:textColorHint">@color/search_hint_color</item>
+        <item name="android:tint">@color/search_hint_color</item>
+    </style>
+
+
+</resources>

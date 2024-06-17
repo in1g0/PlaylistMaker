@@ -4,15 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="?android:windowBackground">
+
 
     <FrameLayout
         android:id="@+id/frameLayoutSettingsHeader"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/SettingsFrameLayout"
         android:layout_marginTop="10dp"
-
-        android:layout_weight="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -20,97 +18,72 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="?android:windowBackground"
             android:orientation="horizontal"
             tools:ignore="UselessParent">
 
             <ImageView
                 android:id="@+id/backButton"
+                style="@style/BackButton"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="20dp"
-                android:background="@android:color/transparent"
-                app:srcCompat="@drawable/arrow_back"
-                app:tint="@color/black" />
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:background="@android:color/transparent" />
+
 
             <TextView
-                android:layout_marginLeft="30dp"
+                style="@style/TextSettingsAndSearchHeader"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/setting"
-                android:textColor="@color/black"
-                android:textSize="@dimen/font_size_buttons" />
+                android:layout_marginLeft="30dp"
+                android:background="?android:windowBackground"
+                android:text="@string/setting" />
         </LinearLayout>
     </FrameLayout>
 
     <FrameLayout
         android:id="@+id/SettingsTheme"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="3"
+        style="@style/SettingsFrameLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayoutSettingsHeader">
 
         <LinearLayout
             android:id="@+id/theme"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="25dp"
-            tools:ignore="UselessParent">
+            style="@style/SettingsLinearLayout"
+            android:padding="21dp">
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:text="@string/settings_theme_switch"
-                android:textColor="@color/black"
-                android:textSize="@dimen/sett_font_size" />
+                style="@style/SettingsTextView"
+                android:text="@string/settings_theme_switch" />
 
             <Switch
-                android:layout_width="56dp"
-                android:layout_height="48dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="end"
-
                 tools:ignore="UseSwitchCompatOrMaterialXml" />
         </LinearLayout>
-
-
     </FrameLayout>
 
     <FrameLayout
         android:id="@+id/ShareSettings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="3"
+        style="@style/SettingsFrameLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SettingsTheme">
 
         <LinearLayout
             android:id="@+id/share"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="25dp"
+            style="@style/SettingsLinearLayout"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/theme">
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:text="@string/settings_share_app"
-                android:textColor="@color/black"
-                android:textSize="@dimen/sett_font_size" />
+                style="@style/SettingsTextView"
+                android:text="@string/settings_share_app" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -121,76 +94,62 @@
                 app:tint="@color/light_theme_sett_icons" />
         </LinearLayout>
     </FrameLayout>
+
     <FrameLayout
         android:id="@+id/SupportSettings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="3"
+        style="@style/SettingsFrameLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ShareSettings">
+
         <LinearLayout
             android:id="@+id/Support"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="25dp"
+            style="@style/SettingsLinearLayout"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/share">
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:text="@string/settings_support"
-                android:textColor="@color/black"
-                android:textSize="@dimen/sett_font_size" />
+                style="@style/SettingsTextView"
+                android:text="@string/settings_support" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:background="@android:color/transparent"
-                app:srcCompat="@drawable/headphones"
+                app:srcCompat="@drawable/group_icon_support"
                 app:tint="@color/light_theme_sett_icons" />
-
         </LinearLayout>
     </FrameLayout>
+
     <FrameLayout
         android:id="@+id/LicenseSettings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="3"
+        style="@style/SettingsFrameLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SupportSettings">
+
         <LinearLayout
             android:id="@+id/License"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="25dp"
+            style="@style/SettingsLinearLayout"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/Support">
+
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:text="@string/settings_licence"
-                android:textColor="@color/black"
-                android:textSize="@dimen/sett_font_size"/>
+                style="@style/SettingsTextView"
+                android:text="@string/settings_licence" />
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:background="@android:color/transparent"
                 app:srcCompat="@drawable/arrow_license"
-                app:tint="@color/light_theme_sett_icons"/>
+                app:tint="@color/light_theme_sett_icons" />
         </LinearLayout>
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
-
